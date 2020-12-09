@@ -4,7 +4,7 @@ const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
 
-const newYears = '1 Jan 2021';
+const newYears = '31 Dec 2020';
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -21,6 +21,17 @@ function countdown() {
     hoursEl.innerHTML = formatTime(hours);
     minsEl.innerHTML = formatTime(minutes);
     secondsEl.innerHTML = formatTime(seconds);
+
+
+    if(days == 0 && hours == 0 && minutes == 0 && seconds == 0){
+
+        document.getElementById('background').style.backgroundImage="url(snow-two.jpg)";
+
+        document.body.innerHTML = document.body.innerHTML.replace('New Years Eve', 'Happy New Year!');
+
+        document.getElementById("year-text").style.color = 'red';
+        
+    }
 
 }
 
