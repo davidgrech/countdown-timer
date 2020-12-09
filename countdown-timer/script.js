@@ -4,7 +4,7 @@ const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
 
-const newYears = '31 Dec 2020';
+const newYears = '1 Jan 2021';
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -17,11 +17,15 @@ function countdown() {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    daysEl.innerHTML = days;
+    daysEl.innerHTML = days ;
     hoursEl.innerHTML = formatTime(hours);
     minsEl.innerHTML = formatTime(minutes);
     secondsEl.innerHTML = formatTime(seconds);
 
+   console.log("days : ", days);
+   console.log("hours : ", hours);
+   console.log("mins : ", minutes);
+   console.log("seconds : ", seconds);
 
     if(days == 0 && hours == 0 && minutes == 0 && seconds == 0){
 
